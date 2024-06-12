@@ -53,7 +53,7 @@ export default {
           this.items = this.items.filter(p => p.id !== item.id);
         }
       } catch (error) {
-        console.error('Erro ao excluir produto:', error);
+        console.error('Erro ao excluir nota de saida:', error);
       }
     }
   },
