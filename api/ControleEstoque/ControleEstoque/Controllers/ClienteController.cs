@@ -35,30 +35,30 @@ namespace ControleEstoque.Controllers
             var cliente = _dbContext.cliente.Find(id);
             if (cliente == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
 
             _dbContext.cliente.Remove(cliente);
             _dbContext.SaveChanges();
 
-            return NoContent(); 
+            return NoContent();
         }
 
         [HttpPut()]
         public IActionResult Update([FromBody] Cliente cliente)
         {
-            var clienteExistente = _dbContext.produto.FirstOrDefault(p => p.Id == cliente.Id);
+            var clienteExistente = _dbContext.cliente.FirstOrDefault(c => c.Id == cliente.Id);
 
             if (clienteExistente == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
 
             clienteExistente.nome = cliente.nome;
 
             _dbContext.SaveChanges();
 
-            return Ok(clienteExistente); 
+            return Ok(clienteExistente);
         }
-    }
+    } 
     }

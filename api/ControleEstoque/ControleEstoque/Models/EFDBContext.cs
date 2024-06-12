@@ -24,6 +24,8 @@ namespace ControleEstoque.Models
 
             if (typeDataBase == "MYSQL") {
                 optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+            }else if (typeDataBase == "SQLite"){
+                optionsBuilder.UseSqlite(connectionString);
             }
         }
     }

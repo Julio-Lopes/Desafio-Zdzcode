@@ -44,7 +44,7 @@ export default {
       }
     },
     editarProduto(item) {
-      this.$router.push({ name: 'editar-cliente', params: { id: item.id, produto: item } });
+      this.$router.push({ name: 'editar-cliente', params: { id: item.id, cliente: item } });
     },
     async deleteProduto(item) {
       try {

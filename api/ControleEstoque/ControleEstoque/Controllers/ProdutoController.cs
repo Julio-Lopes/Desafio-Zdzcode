@@ -44,7 +44,7 @@ namespace ControleEstoque.Controllers
 
             if (produtoExistente == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
 
             produtoExistente.nome = produto.nome;
@@ -52,7 +52,7 @@ namespace ControleEstoque.Controllers
 
             _dbContext.SaveChanges();
 
-            return Ok(produtoExistente); 
+            return Ok(produtoExistente);
         }
     }
     }

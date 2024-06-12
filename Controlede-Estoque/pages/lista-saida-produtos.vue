@@ -11,7 +11,6 @@
         <td>{{ item.nomeProduto }}</td>
         <td>{{ item.quantidade }}</td>
         <td>
-          <v-btn color="blue" @click="editarProduto(item)">Atualizar</v-btn>
           <v-btn color="red" @click="deleteProduto(item)">Remover</v-btn>
         </td>
       </tr>
@@ -46,9 +45,6 @@ export default {
       } catch (error) {
         console.error(error);
       }
-    },
-    editarProduto(item) {
-      this.$router.push({ name: 'editar-cliente', params: { id: item.id, produto: item } });
     },
     async deleteProduto(item) {
       try {
